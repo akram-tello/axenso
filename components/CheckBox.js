@@ -13,6 +13,7 @@ class CheckBox extends Component {
         this.setState({ [e.target.name]: e.target.checked }); 
     }
     render() {
+        const {isReady}=this.state
         return (
             <>
                 <h5> step 3</h5>
@@ -30,7 +31,7 @@ class CheckBox extends Component {
                         id="completeRegistertion"
                         type="submit"
                         className="complete_registertion"
-                        disabled={this.state.isReady != true}>
+                        disabled={isReady != true}>
                         Complete Registertion
                     </button>
                 </form>
