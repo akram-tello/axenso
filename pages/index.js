@@ -1,9 +1,10 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Step1 from '../components/SelectBox'
 import Step2 from '../components/RadioBox'
 import Step3 from '../components/CheckBox'
+import { checkPropTypes } from "prop-types";
+
 
 
 export default function Home() {
