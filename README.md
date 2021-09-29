@@ -16,6 +16,7 @@
 * [tailwindcss](https://github.com/tailwindlabs/tailwindcss)
 * [eslint](http://eslint.org)
 * [classnames](https://github.com/JedWatson/classnames)
+* [responsive Design](#)
 
 ## Requirements
 * node `^14.17.3`
