@@ -39,6 +39,11 @@ class SelectBox extends Component {
         super(props);
         this.state = {
             selectedOption: [],
+            Attendee_1: "",
+            Attendee_2: "",
+            Attendee_3: "",
+            Attendee_4: "",
+            Attendee_5: "",
         };
     }
 
@@ -47,6 +52,10 @@ class SelectBox extends Component {
         let nameLabel = document.getElementById("nameLabel");
         (selectedOption.id > 0) ? nameLabel.style.display = "block" : nameLabel.style.display = "none"
     };
+
+    onChangeHandlerNames = e => {
+        this.setState({ [e.target.name]: e.target.value });
+    }
 
     render() {
         const { selectedOption } = this.state;
@@ -72,7 +81,7 @@ class SelectBox extends Component {
                         {[...Array(n)].map((e, i) => (n === undefined) ? <></> :
                             <div key={i} className="mb-2">
                                 <label>Attendee Name : </label>
-                                <input type="text" />
+                                <input type="text" name={options.name} onChange={this.onChangeHandlerNames} />
                             </div>
                         )}
                     </form>
