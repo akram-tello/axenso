@@ -1,4 +1,10 @@
 # axenso -  Next.js 
+## screenShots
+### web view
+![](./public/screenshots/Capture-web.PNG)
+
+### mobile view
+![](./public/screenshots/Capture-mob.PNG)
 
 ## Table of Contents
 1. [Features](#features)
