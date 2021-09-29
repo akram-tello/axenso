@@ -1,0 +1,36 @@
+//config-color
+$green: #CEE5D0;
+$blue: #c0d0e5;
+$orange: #F9CF93;
+
+
+.green-box{
+    background-color: $green;
+}
+.blue-box{
+    background-color: $blue;
+}
+.orange-box{
+    background-color: $orange;
+}
+.step-label{
+    position: absolute;
+    top: 6.4rem;
+    border-radius: 10px;
+    padding: 2px 10px;
+    font-size: 20px;
+}
+  
+
+@media only screen and (max-width: 600px) {
+    .sm-mt {
+        margin-top: 20px;
+    }
+    .step-label{
+        position: initial;
+        text-align: center;
+        border-radius: 10px;
+        padding: 2px 10px;
+        font-size: 20px;
+    }
+}

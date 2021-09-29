@@ -10,7 +10,7 @@ class DropdownBox extends Component {
             spicalAccommodations: ''
 
         };
-
+        
         this.onChangeHandler = this.onChangeHandler.bind(this);
     }
     onChangeHandler = e => {
@@ -28,11 +28,11 @@ class DropdownBox extends Component {
         const { isOnYourBadges, isSpecial } = this.state
         return (
             <>
-                <div className="blue-box p-3 rounded-bl-md rounded-br-md flex ">
+                <div className="blue-box p-3 mx-2 rounded-md sm:flex sm-mt">
                     <h5 className="bg-white p-1 font-bold rounded step-label"> step 2</h5>
                     <form className="mt-5">
-                        <label className="text-gray-700 font-semibold text-2xl">
-                            would you like your company name on your badges?
+                        <label className="text-gray-700 font-semibold text-2xl italic">
+                            Would you like your company name on your badges?
                             <div>
                                 <input
                                     id="hasBadges"
@@ -55,16 +55,16 @@ class DropdownBox extends Component {
                             </div>
                         </label>
                         <div id="hasCompanyBadges" style={{ display: "none" }}>
-                            <span className="italic text-sm">company Name : </span>
+                            <span className="italic text-sm">Company Name : </span>
                             <input
                                 type="text"
                                 name="companyName"
                                 onChange={this.onChangeHandler} />
                         </div>
                         <br />
-                        <label className="text-gray-700 font-semibold text-2xl">
+                        <label className="text-gray-700 font-semibold text-2xl italic">
                             Will anyone in your group require spical accommodations?
-                            <div className="flex items-stretch">
+                            <div>
                                 <input
                                     id="hasSpecial"
                                     type="radio"
@@ -86,7 +86,7 @@ class DropdownBox extends Component {
                             </div>
                         </label>
                         <div id="spicalAccommodations" style={{ display: "none" }}>
-                            <span className="italic text-sm">what it is : </span>
+                            <span className="italic text-sm">What it is : </span>
                             <input
                                 type="text"
                                 name="spicalAccommodations"
@@ -95,7 +95,6 @@ class DropdownBox extends Component {
                         </div>
                     </form>
                 </div>
-
             </>
         )
     }

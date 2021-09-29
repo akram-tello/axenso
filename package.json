@@ -10,12 +10,14 @@
   },
   "dependencies": {
     "autoprefixer": "^10.3.6",
+    "classnames": "^2.3.1",
     "next": "11.1.2",
     "postcss": "^8.3.8",
     "prop-types": "^15.7.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-select": "^5.0.0",
+    "sass": "^1.42.1",
     "tailwindcss": "^2.2.16"
   },
   "devDependencies": {

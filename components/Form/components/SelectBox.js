@@ -53,11 +53,11 @@ class SelectBox extends Component {
         const n = selectedOption.id;
         return (
             <>
-                <div className="box-1 p-3 rounded-bl-md rounded-br-md flex ">
+                <div className="green-box p-3 mx-2 rounded-md sm:flex sm-mt">
                     <h5 className="bg-white p-1 font-bold rounded step-label"> step 1</h5>
                     <form >
                         <div className="mt-5">
-                            <label className=" text-gray-700 font-semibold text-2xl">How many people be attending?</label>
+                            <label className=" text-gray-700 font-semibold text-2xl italic">How many people be attending?</label>
                             <Select
                                 id="f1"
                                 key={options.id}
@@ -65,15 +65,14 @@ class SelectBox extends Component {
                                 onChange={this.handleChange}
                                 options={options}
                                 placeholder="Please choose.."
-                            />
+                                className="mt-2" />
                         </div>
                         <br />
                         <label id="nameLabel" style={{ display: "none" }} className=" text-gray-700 font-bold">Please Provide Full Names:</label>
                         {[...Array(n)].map((e, i) => (n === undefined) ? <></> :
                             <div key={i} className="mb-2">
                                 <label>Attendee Name : </label>
-                                <input
-                                    type="text" />
+                                <input type="text" />
                             </div>
                         )}
                     </form>

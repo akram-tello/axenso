@@ -9,12 +9,11 @@ export class Form extends Component {
 
         return (
             <>
-                <div className="flex">
+                <div className="md:flex">
                     <SelectBox />
                     <RadioBox />
                     <CheckBox />
                 </div>
-
             </>
         )
     }
