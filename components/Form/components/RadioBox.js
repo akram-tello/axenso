@@ -28,67 +28,74 @@ class DropdownBox extends Component {
         const { isOnYourBadges, isSpecial } = this.state
         return (
             <>
-                <h5> step 2</h5>
-                <form>
-                    <label>
-                        would you like your company name on your badges?
-                        <div>
+                <div className="blue-box p-3 rounded-bl-md rounded-br-md flex ">
+                    <h5 className="bg-white p-1 font-bold rounded step-label"> step 2</h5>
+                    <form className="mt-5">
+                        <label className="text-gray-700 font-semibold text-2xl">
+                            would you like your company name on your badges?
+                            <div>
+                                <input
+                                    id="hasBadges"
+                                    type="radio"
+                                    name="isOnYourBadges"
+                                    value="yes"
+                                    checked={isOnYourBadges === "yes"}
+                                    onChange={this.onChangeHandler}
+                                    className="self-auto" />
+                                <span className="mx-2 self-auto">Yes</span>
+                                <input
+                                    id="noBadges"
+                                    type="radio"
+                                    name="isOnYourBadges"
+                                    value="no"
+                                    checked={isOnYourBadges === "no"}
+                                    onChange={this.onChangeHandler}
+                                    className="self-auto" />
+                               <span className="mx-2 self-auto">No</span>
+                            </div>
+                        </label>
+                        <div id="hasCompanyBadges" style={{ display: "none" }}>
+                            <span className="italic text-sm">company Name : </span>
                             <input
-                                id="hasBadges"
-                                type="radio"
-                                name="isOnYourBadges"
-                                value="yes"
-                                checked={isOnYourBadges === "yes"}
-                                onChange={this.onChangeHandler}>
-                            </input>Yes
-                            <input
-                                id="noBadges"
-                                type="radio"
-                                name="isOnYourBadges"
-                                value="no"
-                                checked={isOnYourBadges === "no"}
-                                onChange={this.onChangeHandler}>
-                            </input>no
+                                type="text"
+                                name="companyName"
+                                onChange={this.onChangeHandler} />
                         </div>
-                    </label>
-                    <div id="hasCompanyBadges" style={{ display: "none" }}>
-                        <span>company Name : </span>
-                        <input
-                            type="text"
-                            name="companyName"
-                            onChange={this.onChangeHandler} />
-                    </div>
-                    <br />
-                    <label>
-                        Will anyone in your group require spical accommodations?
-                        <div>
+                        <br />
+                        <label className="text-gray-700 font-semibold text-2xl">
+                            Will anyone in your group require spical accommodations?
+                            <div className="flex items-stretch">
+                                <input
+                                    id="hasSpecial"
+                                    type="radio"
+                                    name="isSpecial"
+                                    value="spical"
+                                    checked={isSpecial === "spical"}
+                                    onChange={this.onChangeHandler} 
+                                    className="self-auto"/>
+                                <span className="mx-2 self-auto">Yes</span>
+                                <input
+                                    id="noSpical"
+                                    type="radio"
+                                    name="isSpecial"
+                                    value="notSpical"
+                                    checked={isSpecial === "notSpical"}
+                                    onChange={this.onChangeHandler}
+                                    className="self-auto" />
+                                    <span className="mx-2 self-auto">No</span>
+                            </div>
+                        </label>
+                        <div id="spicalAccommodations" style={{ display: "none" }}>
+                            <span className="italic text-sm">what it is : </span>
                             <input
-                                id="hasSpecial"
-                                type="radio"
-                                name="isSpecial"
-                                value="spical"
-                                checked={isSpecial === "spical"}
-                                onChange={this.onChangeHandler}>
-                            </input>Yes
-                            <input
-                                id="noSpical"
-                                type="radio"
-                                name="isSpecial"
-                                value="notSpical"
-                                checked={isSpecial === "notSpical"}
-                                onChange={this.onChangeHandler}>
-                            </input>no
+                                type="text"
+                                name="spicalAccommodations"
+                                onChange={this.onChangeHandler}
+                            />
                         </div>
-                    </label>
-                    <div id="spicalAccommodations" style={{ display: "none" }}>
-                        <span>what it is : </span>
-                        <input
-                            type="text"
-                            name="spicalAccommodations"
-                            onChange={this.onChangeHandler}
-                        />
-                    </div>
-                </form>
+                    </form>
+                </div>
+
             </>
         )
     }

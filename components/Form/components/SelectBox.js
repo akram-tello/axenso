@@ -44,7 +44,6 @@ class SelectBox extends Component {
 
     handleChange = selectedOption => {
         this.setState({ selectedOption });
-        console.log(`Option selected:`, selectedOption);
         let nameLabel = document.getElementById("nameLabel");
         (selectedOption.id > 0) ? nameLabel.style.display = "block" : nameLabel.style.display = "none"
     };
@@ -54,30 +53,31 @@ class SelectBox extends Component {
         const n = selectedOption.id;
         return (
             <>
-                <h5> step 1</h5>
-                <form >
-                    <div className="">
-                        <label>How many people be attending?</label>
-                        <Select
-                            id="f1"
-                            key={options.id}
-                            value={selectedOption}
-                            onChange={this.handleChange}
-                            options={options}
-                        />
-                    </div>
-                    <br />
-                    <label id="nameLabel" style={{ display: "none" }}>Please Provide Full Names:</label>
-                    {console.log(selectedOption)}
-                    {[...Array(n)].map((e, i) => (n === undefined) ? <></> :
-                        <div key={i}>
-                            <label>Attendee Name : </label>
-                            <input
-                                type="text" />
+                <div className="box-1 p-3 rounded-bl-md rounded-br-md flex ">
+                    <h5 className="bg-white p-1 font-bold rounded step-label"> step 1</h5>
+                    <form >
+                        <div className="mt-5">
+                            <label className=" text-gray-700 font-semibold text-2xl">How many people be attending?</label>
+                            <Select
+                                id="f1"
+                                key={options.id}
+                                value={selectedOption}
+                                onChange={this.handleChange}
+                                options={options}
+                                placeholder="Please choose.."
+                            />
                         </div>
-                    )}
-                </form>
-
+                        <br />
+                        <label id="nameLabel" style={{ display: "none" }} className=" text-gray-700 font-bold">Please Provide Full Names:</label>
+                        {[...Array(n)].map((e, i) => (n === undefined) ? <></> :
+                            <div key={i} className="mb-2">
+                                <label>Attendee Name : </label>
+                                <input
+                                    type="text" />
+                            </div>
+                        )}
+                    </form>
+                </div>
             </>
         )
     }
