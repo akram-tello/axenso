@@ -1,12 +1,4 @@
-# axenso
-# axenso
-# kaodim-dashboard
-[![CircleCI](https://circleci.com/gh/kaodim/dahl/tree/master.svg?style=svg&circle-token=583bc74ec20739d4fa28b355d24b2084b8b391b1)](https://circleci.com/gh/kaodim/dahl/tree/master)
-[![Maintainability](https://api.codeclimate.com/v1/badges/8255271e5637013f5108/maintainability)](https://codeclimate.com/repos/59ddaf57775523028300090a/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/8255271e5637013f5108/test_coverage)](https://codeclimate.com/repos/59ddaf57775523028300090a/test_coverage)
-
-# Dahl - React Redux User Dashboard
-
+# axenso -  Next.js 
 
 ## Table of Contents
 1. [Features](#features)
