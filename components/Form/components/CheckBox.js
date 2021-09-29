@@ -10,10 +10,10 @@ class CheckBox extends Component {
         this.onChangeHandler = this.onChangeHandler.bind(this);
     }
     onChangeHandler = e => {
-        this.setState({ [e.target.name]: e.target.checked }); 
+        this.setState({ [e.target.name]: e.target.checked });
     }
     render() {
-        const {isReady}=this.state
+        const { isReady } = this.state
         return (
             <>
                 <h5> step 3</h5>
@@ -21,6 +21,7 @@ class CheckBox extends Component {
                     <label>
                         are you ready to rock?
                         <input
+                            value={isReady}
                             type="checkbox"
                             name="isReady"
                             checked={this.isReady}

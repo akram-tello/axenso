@@ -5,7 +5,10 @@ class DropdownBox extends Component {
         super(props);
         this.state = {
             isOnYourBadges: '',
-            isSpecial: ''
+            isSpecial: '',
+            companyName: '',
+            spicalAccommodations: ''
+
         };
 
         this.onChangeHandler = this.onChangeHandler.bind(this);
@@ -13,11 +16,14 @@ class DropdownBox extends Component {
     onChangeHandler = e => {
         this.setState({ [e.target.name]: e.target.value });
         let hasspicalAccommodations = document.getElementById("spicalAccommodations");
-        let hasCompanyBadges =  document.getElementById("hasCompanyBadges");
-        
-        document.getElementById("hasSpecial").checked ? hasspicalAccommodations.style.display = "block" : hasspicalAccommodations.style.display = "none";
-        document.getElementById("hasBadges").checked ? hasCompanyBadges.style.display = "block" : hasCompanyBadges.style.display = "none";
+        let hasCompanyBadges = document.getElementById("hasCompanyBadges");
+        let hasSpecial = document.getElementById("hasSpecial");
+        let hasBadges = document.getElementById("hasBadges");
+
+        hasSpecial.checked ? hasspicalAccommodations.style.display = "block" : hasspicalAccommodations.style.display = "none";
+        hasBadges.checked ? hasCompanyBadges.style.display = "block" : hasCompanyBadges.style.display = "none";
     }
+
     render() {
         const { isOnYourBadges, isSpecial } = this.state
         return (
@@ -47,7 +53,10 @@ class DropdownBox extends Component {
                     </label>
                     <div id="hasCompanyBadges" style={{ display: "none" }}>
                         <span>company Name : </span>
-                        <input type="text" />
+                        <input
+                            type="text"
+                            name="companyName"
+                            onChange={this.onChangeHandler} />
                     </div>
                     <br />
                     <label>
@@ -73,7 +82,11 @@ class DropdownBox extends Component {
                     </label>
                     <div id="spicalAccommodations" style={{ display: "none" }}>
                         <span>what it is : </span>
-                        <input type="text" />
+                        <input
+                            type="text"
+                            name="spicalAccommodations"
+                            onChange={this.onChangeHandler}
+                        />
                     </div>
                 </form>
             </>
