@@ -1,10 +1,4 @@
 # axenso -  Next.js 
-## screenShots
-### web view
-![](./public/screenshots/Capture-web.PNG)
-
-### mobile view
-![](./public/screenshots/Capture-mob.PNG)
 
 ## Table of Contents
 1. [Features](#features)
@@ -12,6 +6,7 @@
 1. [Getting Started](#getting-started)
 1. [Application Structure](#application-structure)
 1. [Styles](#styles)
+1. [Screenshots](#screenShots)
 
 ## Features
 * [react](https://github.com/facebook/react)
@@ -99,3 +94,9 @@ The application structure presented in this boilerplate is **fractal**, where fu
 
 Used tailwindcss as main style lib with Sass, Both `.scss` and `.css` file extensions are supported out of the box. After being imported, styles will be processed with [PostCSS] for minification and autoprefixing, and will be extracted to a `.css` file during production builds.
 
+## screenShots
+### web view
+![](./public/screenshots/Capture-web.PNG)
+
+### mobile view
+![](./public/screenshots/Capture-mob.PNG)
